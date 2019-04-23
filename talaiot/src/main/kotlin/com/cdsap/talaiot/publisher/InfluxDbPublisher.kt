@@ -14,8 +14,6 @@ class InfluxDbPublisher(
     private val executor: Executor
 ) : Publisher {
 
-
-
     override fun publish(measurementAggregated: TaskMeasurementAggregated) {
         logTracker.log("================")
         logTracker.log("InfluxDbPublisher")

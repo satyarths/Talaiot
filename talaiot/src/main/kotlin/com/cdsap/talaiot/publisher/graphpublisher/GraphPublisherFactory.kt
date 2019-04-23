@@ -1,14 +1,14 @@
-package com.cdsap.talaiot.composer
+package com.cdsap.talaiot.publisher.graphpublisher
 
 import com.cdsap.talaiot.logger.LogTracker
 import com.cdsap.talaiot.writer.FileWriter
 import java.util.concurrent.Executor
 
-interface ComposerFactory {
-    fun createComposer(
-        graphType: ComposerType,
+interface GraphPublisherFactory {
+    fun createPublisher(
+        graphType: GraphPublisherType,
         logTracker: LogTracker,
         fileWriter: FileWriter,
         executor: Executor
-    ): Composer
+    ): DiskPublisher
 }
