@@ -19,7 +19,7 @@ class TaskDependencyGraphPublisher(
     private val graphPublisherFactory: GraphPublisherFactory
 ) : Publisher {
 
-    override fun publish(measurementAggregated: TaskMeasurementAggregated) {
+    override fun publish(taskMeasurementAggregated: TaskMeasurementAggregated) {
         logTracker.log("================")
         logTracker.log("TaskDependencyGraphPublisher")
         logTracker.log("================")
@@ -55,7 +55,7 @@ class TaskDependencyGraphPublisher(
                 }
 
                 listOfPublishers.forEach {
-                    it.publish(measurementAggregated)
+                    it.publish(taskMeasurementAggregated)
                 }
 
             } else {
